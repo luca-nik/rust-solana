@@ -1,0 +1,42 @@
+{
+    "name": "lottery-tickets",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "clean": "./scripts/cicd.sh clean",
+        "reset": "./scripts/cicd.sh reset",
+        "build": "./scripts/cicd.sh build",
+        "deploy": "./scripts/cicd.sh deploy",
+        "reset-and-build": "./scripts/cicd.sh reset-and-build",
+        "app": "ts-node ./src/client/app.ts"
+    },
+    "dependencies": {
+        "@solana/buffer-layout": "^4.0.1",
+        "@solana/spl-token": "^0.4.8",
+        "@solana/web3.js": "^1.33.0",
+        "borsh": "^2.0.0",
+        "buffer": "^6.0.3",
+        "mz": "^2.7.0",
+        "yaml": "2.5.1"
+    },
+    "devDependencies": {
+        "@tsconfig/recommended": "^1.0.1",
+        "@types/eslint": "9.6.1",
+        "@types/eslint-plugin-prettier": "^3.1.0",
+        "@types/mz": "^2.7.2",
+        "@types/prettier": "2.7.3",
+        "@types/yaml": "1.9.6",
+        "@typescript-eslint/eslint-plugin": "8.4.0",
+        "@typescript-eslint/parser": "8.4.0",
+        "eslint": "9.9.1",
+        "eslint-config-prettier": "9.1.0",
+        "eslint-plugin-prettier": "5.2.1",
+        "prettier": "3.3.3",
+        "start-server-and-test": "2.0.5",
+        "ts-node": "^10.9.2",
+        "typescript": "5.5.4"
+    },
+    "engines": {
+        "node": ">=14.0.0"
+    }
+}

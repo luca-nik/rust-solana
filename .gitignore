@@ -1,0 +1,6 @@
+lottery-tickets/node_modules/
+lottery-tickets/src/ticket/Cargo.lock
+lottery-tickets/src/ticket/target/
+lottery-tickets/test-ledger/
+lottery-tickets/package-lock.json
+lottery-tickets/dist/
