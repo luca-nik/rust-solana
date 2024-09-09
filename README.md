@@ -4,5 +4,5 @@ This repository is where I experiment with coding simple dApps on Solana using R
 
 ## Projects
 
-- **lottery-tickets**: A Rust program for creating a lottery ticket as a NFT on the Solana Blockchain
-
+- **lottery-tickets-native**: A native Rust program for creating a lottery ticket as a NFT on the Solana Blockchain;
+- **lottery-tickets-anchor**: Kind of the same but using Anchor.
