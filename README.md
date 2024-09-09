@@ -1,4 +1,4 @@
-# rust-solana
+# 🦀 rust-solana
 
 This repository is where I experiment with coding simple dApps on Solana using Rust.
 
