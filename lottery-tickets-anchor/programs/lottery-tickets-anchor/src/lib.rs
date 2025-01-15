@@ -8,6 +8,15 @@ use anchor_spl::associated_token::AssociatedToken;
 
 declare_id!("7fM8upzdwQoXLDprTj1B32JqbRHNH3aVts9q2y8Dyp36");
 
+// This program is a Rust smart contract using Anchor for Solana blockchain development.
+// The main purpose is to mint a lottery ticket and create associated token accounts.
+// 
+// -------------------------------
+// How the mint_ticket function works:
+// - Initializes accounts using the Anchor framework.
+// - Uses the associated_token program to create a token account.
+// - Mints a single token to the created token account.
+// -------------------------------
 #[program]
 pub mod lottery_tickets_anchor {
     use super::*;
