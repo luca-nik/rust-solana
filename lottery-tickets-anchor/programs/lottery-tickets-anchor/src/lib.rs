@@ -8,19 +8,55 @@ use anchor_spl::associated_token::AssociatedToken;
 
 declare_id!("7fM8upzdwQoXLDprTj1B32JqbRHNH3aVts9q2y8Dyp36");
 
-// This program is a Rust smart contract using Anchor for Solana blockchain development.
-// The main purpose is to mint a lottery ticket and create associated token accounts.
-// 
-// -------------------------------
-// How the mint_ticket function works:
-// - Initializes accounts using the Anchor framework.
-// - Uses the associated_token program to create a token account.
-// - Mints a single token to the created token account.
-// -------------------------------
+// ================================================
+// RUST SMART CONTRACT FOR SOLANA: LOTTERY TICKETS
+// ================================================
+//
+// This Rust file is part of the Lottery Tickets Anchor project.
+// It demonstrates a Solana smart contract using the Anchor framework.
+//
+// ------------------------------------------
+// Key Features:
+// 1. Mint Lottery Tickets
+// 2. Use Anchor SPL libraries for token operations
+// 3. Implement Program Derived Accounts (PDAs)
+// 4. Ensure best practices in Solana token management
+// ------------------------------------------
+//
+// ------------------------------------------
+// File Structure:
+// - Imports: Required libraries and modules
+// - Declare ID: Program-specific identifier
+// - #[program]: Main entry point for contract logic
+// - Structs: Context and account configurations
+// ------------------------------------------
+//
+// ## Detailed Documentation
+// 1. Each ticket is uniquely identified using a combination of numbers and a bump seed.
+// 2. This program ensures compatibility with Solana's token standards.
+// 3. Extensively commented to serve as a learning resource.
+// ================================================
 #[program]
 pub mod lottery_tickets_anchor {
     use super::*;
 
+    // ------------------------------------------
+    // FUNCTION: mint_ticket
+    // ------------------------------------------
+    //
+    // This function is responsible for minting a lottery ticket.
+    //
+    // Parameters:
+    // - ctx: Execution context for the function.
+    // - numbers: Array of 6 numbers serving as a unique identifier.
+    // - bump: Seed for deriving the PDA.
+    //
+    // Steps:
+    // 1. Log the inputs for debugging purposes.
+    // 2. Create associated token accounts.
+    // 3. Mint a token to the created account.
+    //
+    // ------------------------------------------
     pub fn mint_ticket(
         ctx: Context<CreateMint>,
         numbers: [u8; 6],
@@ -70,6 +106,13 @@ pub mod lottery_tickets_anchor {
     }
 }
 
+// ------------------------------------------
+// STRUCT: CreateMint
+// ------------------------------------------
+//
+// This struct defines the context for the mint_ticket function.
+// It includes account configurations and program relationships.
+// ------------------------------------------
 #[derive(Accounts)]
 #[instruction(numbers : [u8;6])]
 pub struct CreateMint<'info> {
